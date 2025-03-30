@@ -1,0 +1,14 @@
+*.pdf
+*.dat
+*.o
+QuadraTb
+libs/ac_types/
+quartus/db/
+quartus/incremental_db/
+quartus/output_files/
+quartus/simulation/
+*.bak
+*.pb
+*.vcd
+verilator/obj_dir/
+verilator/xsim.dir/
