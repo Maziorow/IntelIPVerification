@@ -8,4 +8,7 @@ module square
     // Compute x2^2:
     always_comb sq = x2 * x2;
 
+    wire logic [33:0] sq_2;
+    assign sq_2 = x2*x2;
+
 endmodule    

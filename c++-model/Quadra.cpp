@@ -164,6 +164,7 @@ y_fxd_t approxFixed (const x_fxd_t & x_fxd)
 
     x1_fxd_t x1_fxd = 0; x1_fxd.set_slc(0, x1_int); // u1.6
     x2_fxd_t x2_fxd = 0; x2_fxd.set_slc(0, x2_int); // u(-6).23
+    cout << x2_fxd.length() << endl;
 
     if constexpr (DBG_OUT) {
         cout << "x1_fxd = "

@@ -1,21 +1,21 @@
 [*]
-[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Tue Apr  1 16:42:27 2025
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Tue Apr  1 20:23:27 2025
 [*]
-[dumpfile] "/home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator/dump.vcd"
-[dumpfile_mtime] "Tue Apr  1 16:41:16 2025"
-[dumpfile_size] 5432
-[savefile] "/home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator/waves.gtkw"
-[timestart] 500
-[size] 1920 1010
-[pos] -104 -104
-*-11.847281 22030 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[dumpfile] "/home/mateusz/Documents/IntelIPVerification/verilator/dump.vcd"
+[dumpfile_mtime] "Tue Apr  1 20:14:42 2025"
+[dumpfile_size] 8132
+[savefile] "/home/mateusz/Documents/IntelIPVerification/verilator/waves.gtkw"
+[timestart] 7690
+[size] 1854 1004
+[pos] -1 -1
+*-11.847281 23070 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.quadra_top.
 [sst_width] 273
 [signals_width] 248
 [sst_expanded] 1
-[sst_vpaned_height] 300
+[sst_vpaned_height] 283
 @28
 top.clk
 top.rst_b
@@ -26,7 +26,6 @@ top.x[23:0]
 top.quadra_top.my_quadra.x1[6:0]
 [fpshift_count] 23
 top.quadra_top.my_quadra.x2[16:0]
-@40000025
 [fpshift_count] 36
 top.quadra_top.my_quadra.sq[23:0]
 @28
@@ -35,13 +34,21 @@ top.x_dv
 top.y[23:0]
 @28
 top.y_dv
-@22
+@40000420
+[fpshift_count] 28
 top.quadra_top.my_quadra.a[31:0]
+[fpshift_count] 28
 top.quadra_top.my_quadra.b[31:0]
+[fpshift_count] 28
 top.quadra_top.my_quadra.c[31:0]
-top.quadra_top.my_quadra.s[28:0]
+[fpshift_count] 27
 top.quadra_top.my_quadra.t0[30:0]
+[fpshift_count] 27
 top.quadra_top.my_quadra.t1[30:0]
+[fpshift_count] 27
 top.quadra_top.my_quadra.t2[30:0]
+@40000421
+[fpshift_count] 27
+top.quadra_top.my_quadra.s[28:0]
 [pattern_trace] 1
 [pattern_trace] 0

@@ -182,6 +182,7 @@ inline void checkOutput
              << dec << scientific << setw(SP_WIDTH) << setprecision(SP_PREC) << right << y_cpp_dbl << "  ["
              << dec << scientific << setw(SP_WIDTH) << setprecision(SP_PREC) << right << y_cpp_err << "]  "
              << ((match_ok) ? " ==" : " !=")
+             << dec << scientific << setw(SP_WIDTH) << setprecision(SP_PREC) << right << y_rtl_dbl << "   "
              << dec << scientific << setw(SP_WIDTH) << setprecision(SP_PREC) << right << y_rtl_dbl << "  ["
              << dec << scientific << setw(SP_WIDTH) << setprecision(SP_PREC) << right << y_rtl_err << "]  "
              << endl;
