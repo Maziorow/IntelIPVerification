@@ -1,53 +1,47 @@
 [*]
-[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Wed Dec 27 15:43:06 2023
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Tue Apr  1 16:42:27 2025
 [*]
-[dumpfile] "/mnt/disk2/tjnagler/proj/axg/repos/gpu-math/func-approx/coding-exercise/verilator/dump.vcd"
-[dumpfile_mtime] "Wed Dec 27 15:42:33 2023"
-[dumpfile_size] 14426
-[savefile] "/mnt/disk2/tjnagler/proj/axg/repos/gpu-math/func-approx/coding-exercise/verilator/waves.gtkw"
-[timestart] 16730
-[size] 1465 600
-[pos] -1 -1
-*-11.978342 32600 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
-[treeopen] quadra_top.
-[sst_width] 214
+[dumpfile] "/home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator/dump.vcd"
+[dumpfile_mtime] "Tue Apr  1 16:41:16 2025"
+[dumpfile_size] 5432
+[savefile] "/home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator/waves.gtkw"
+[timestart] 500
+[size] 1920 1010
+[pos] -104 -104
+*-11.847281 22030 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.quadra_top.
+[sst_width] 273
 [signals_width] 248
 [sst_expanded] 1
-[sst_vpaned_height] 152
+[sst_vpaned_height] 300
 @28
-quadra_top.clk
-quadra_top.rst_b
-quadra_top.x_dv
+top.clk
+top.rst_b
+@40000024
+[fpshift_count] 23
+top.x[23:0]
+[fpshift_count] 6
+top.quadra_top.my_quadra.x1[6:0]
+[fpshift_count] 23
+top.quadra_top.my_quadra.x2[16:0]
+@40000025
+[fpshift_count] 36
+top.quadra_top.my_quadra.sq[23:0]
+@28
+top.x_dv
 @22
-quadra_top.x[23:0]
+top.y[23:0]
 @28
-[color] 5
-quadra_top.dv_p0
+top.y_dv
 @22
-quadra_top.x_p0[23:0]
-quadra_top.x1_p0[6:0]
-quadra_top.x2_p0[16:0]
-quadra_top.sq_p0[23:0]
-quadra_top.a_p0[23:0]
-quadra_top.b_p0[19:0]
-quadra_top.c_p0[15:0]
-@28
-[color] 5
-quadra_top.dv_p1
-@22
-quadra_top.sq_p1[23:0]
-quadra_top.a_p1[23:0]
-quadra_top.b_p1[19:0]
-quadra_top.c_p1[15:0]
-@28
-[color] 5
-quadra_top.dv_p2
-@23
-quadra_top.y_p2[23:0]
-@28
-quadra_top.y_dv
-@22
-quadra_top.y[23:0]
+top.quadra_top.my_quadra.a[31:0]
+top.quadra_top.my_quadra.b[31:0]
+top.quadra_top.my_quadra.c[31:0]
+top.quadra_top.my_quadra.s[28:0]
+top.quadra_top.my_quadra.t0[30:0]
+top.quadra_top.my_quadra.t1[30:0]
+top.quadra_top.my_quadra.t2[30:0]
 [pattern_trace] 1
 [pattern_trace] 0

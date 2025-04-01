@@ -12,3 +12,5 @@ quartus/simulation/
 *.vcd
 verilator/obj_dir/
 verilator/xsim.dir/
+.vscode/
+xsim.dir/
