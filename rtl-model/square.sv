@@ -5,10 +5,10 @@ module square
     input  x2_t x2,
     output sq_t sq
 );
-    // Compute x2^2:
-    always_comb sq = x2 * x2;
+    logic [33:0] tmp;
 
-    wire logic [33:0] sq_2;
-    assign sq_2 = x2*x2;
+    // Compute x2^2:
+    assign tmp = x2*x2;
+    always_comb sq = {12'b0, tmp[33:22]};
 
 endmodule    

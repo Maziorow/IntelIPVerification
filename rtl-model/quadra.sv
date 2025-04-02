@@ -7,7 +7,7 @@
 module quadra
 (
     input x_t x,
-	 output y_t y
+	output y_t y
 );
 
 	 x1_t x1;
@@ -20,17 +20,13 @@ module quadra
 	 t1_t t1;
 	 t2_t t2;
 	 s_t s;
-	 sq_t sq_well;
 
-	logic signed [49:0] Product_mul_temp;  /* sfix50_En51 */
+	logic signed [49:0] Product_mul_temp1;  /* sfix50_En51 */
     logic signed [48:0] Product_out1;  /* sfix49_En51 */
 
-	logic signed [24:0] Product_cast;  /* sfix25_En24 */
-  logic signed [56:0] Product_mul_temp1;  /* sfix57_En52 */
-  logic signed [55:0] Product_out2;  /* sfix56_En52 */
-  logic signed [30:0] Cast_out1;  /* sfix31_En27 */
+	logic signed [32:0] sum;
 
-	
+
    lut lut_1(.x1(x1),
 				   .a(a),
 					.b(b),
@@ -40,18 +36,17 @@ module quadra
 						  .sq(sq));
    
 
-	assign sq_well = sq >> 12;
 	assign x1 = x[23:17];
 	assign x2 = x[16:0];
 	assign t0 = a >>> 1;
-	assign Product_mul_temp = $signed({1'b0,x2}) * b;
-	assign Product_out1 = Product_mul_temp[48:0];
+	assign Product_mul_temp1 = $signed({1'b0,x2}) * b;
+	assign Product_out1 = Product_mul_temp1[48:0];
 	assign t1 = {{6{Product_out1[48]}}, Product_out1[48:24]};
-  	assign Product_cast = {1'b0, sq_well};
-  	assign Product_mul_temp1 = Product_cast * c;
-  	assign Product_out2 = Product_mul_temp1[55:0];
-	assign Cast_out1 = Product_out2[55:25];
-	assign t2 = Cast_out1;
-	assign s = (t0 + t1 + t2);
-	assign y = s[28:4];
+	wire signed [56:0] product = c * $signed({1'b0, sq});
+  	assign t2 = product[55:25];
+
+	assign sum = t0 + t1 + t2;
+  	assign s = sum[28:0];
+
+  	assign y = s[28 : 4]+1;
 endmodule

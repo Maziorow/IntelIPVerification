@@ -182,7 +182,6 @@ inline void checkOutput
              << dec << scientific << setw(SP_WIDTH) << setprecision(SP_PREC) << right << y_cpp_dbl << "  ["
              << dec << scientific << setw(SP_WIDTH) << setprecision(SP_PREC) << right << y_cpp_err << "]  "
              << ((match_ok) ? " ==" : " !=")
-             << dec << scientific << setw(SP_WIDTH) << setprecision(SP_PREC) << right << y_rtl_dbl << "   "
              << dec << scientific << setw(SP_WIDTH) << setprecision(SP_PREC) << right << y_rtl_dbl << "  ["
              << dec << scientific << setw(SP_WIDTH) << setprecision(SP_PREC) << right << y_rtl_err << "]  "
              << endl;
@@ -201,11 +200,11 @@ void testQuadra
     using namespace std;
 
     // Test params:
-//  uint32_t x_start = 0x000000; // 0.0
-    uint32_t x_start = 0xfffff0;
+    uint32_t x_start = 0x000000; // 0.0
+//    uint32_t x_start = 0xfffff0;
     uint32_t x_stop  = 0xffffff; // 1.999...
-    uint32_t x_step  = 0x000001; // exhaustive test
-//  uint32_t x_step  = 0x000001; // sparse test
+//    uint32_t x_step  = 0x000001; // exhaustive test
+  uint32_t x_step  = 0x000101; // sparse test
 
     // Main simulation loop:
     for (uint32_t x = x_start; x <= x_stop; x += x_step)
