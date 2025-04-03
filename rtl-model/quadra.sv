@@ -21,10 +21,14 @@ module quadra
 	 t2_t t2;
 	 s_t s;
 
+
 	logic signed [49:0] Product_mul_temp1;  /* sfix50_En51 */
     logic signed [48:0] Product_out1;  /* sfix49_En51 */
+	logic signed [T2_PRODUCT_W-1:0] t2_product;
 
-	logic signed [32:0] sum;
+	logic signed [S_W+1:0] sum;
+	logic [Y_ROUND-1:0] round_bits;
+	logic round_bit;
 
 
    lut lut_1(.x1(x1),
@@ -38,15 +42,20 @@ module quadra
 
 	assign x1 = x[23:17];
 	assign x2 = x[16:0];
-	assign t0 = a >>> 1;
+
+	assign t0 = a >>> (A_SHIFT);
+
 	assign Product_mul_temp1 = $signed({1'b0,x2}) * b;
 	assign Product_out1 = Product_mul_temp1[48:0];
 	assign t1 = {{6{Product_out1[48]}}, Product_out1[48:24]};
-	wire signed [56:0] product = c * $signed({1'b0, sq});
-  	assign t2 = product[55:25];
+
+	assign t2_product = $signed({1'b0, sq}) * c;
+  	assign t2 = t2_product[T2_PRODUCT_TRUNC_W-1:T2_ROUND];
 
 	assign sum = t0 + t1 + t2;
-  	assign s = sum[28:0];
-
-  	assign y = s[28 : 4]+1;
+  	assign s = sum[S_W-1:0];
+	assign round_bits = s[Y_ROUND-1:0];
+	assign round_bit = (round_bits > Y_ROUND_THRESH) || 
+                ((round_bits == Y_ROUND_THRESH) && s[Y_ROUND]);
+	assign y = s[S_W-1:Y_ROUND] + round_bit;
 endmodule

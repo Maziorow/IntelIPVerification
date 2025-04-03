@@ -62,7 +62,7 @@ function write_lut_sv()
   fprintf(fid, '    unique casez (x1)\n');
   for i = 1:size(coeffs, 1)
     k = coeffs(i, 1);
-    a_q = round(coeffs(i, 2) * (2^A_F));
+    a_q = floor(coeffs(i, 2) * (2^A_F));
     if (a_q < 0)
       a_val = a_q + (2^A_W);
     else
@@ -78,7 +78,7 @@ function write_lut_sv()
   fprintf(fid, '    unique casez (x1)\n');
   for i = 1:size(coeffs, 1)
     k = coeffs(i, 1);
-    b_q = round(coeffs(i, 3) * (2^B_F));
+    b_q = floor(coeffs(i, 3) * (2^B_F));
     if (b_q < 0)
       b_val = b_q + (2^B_W);
     else
@@ -94,7 +94,7 @@ function write_lut_sv()
   fprintf(fid, '    unique casez (x1)\n');
   for i = 1:size(coeffs, 1)
     k = coeffs(i, 1);
-    c_q = round(coeffs(i, 4) * (2^C_F));
+    c_q = floor(coeffs(i, 4) * (2^C_F));
     if (c_q < 0)
       c_val = c_q + (2^C_W);
     else
