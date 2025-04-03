@@ -39,6 +39,7 @@ typedef logic [X1_W-1:0] x1_t;
 
 
 localparam int X2_I = 0;
+localparam int X2_J = -6;
 localparam int X2_F = 17;
 localparam int X2_W = X2_I + X2_F;
 
@@ -104,14 +105,15 @@ typedef logic signed [T2_W-1:0] t2_t;
 
 localparam A_SHIFT = A_F-T0_F;
 
-localparam int T1_PRODUCT_W = X2_W + B_W;      // 17 + 32 = 49 bits
-localparam int T1_PRODUCT_FRAC = X2_F + B_F;   // 17 + 28 = 45 fractional bits
-localparam int T1_KEEP_MSB = T1_PRODUCT_W - 1; // 48 (MSB of product)
-localparam int T1_KEEP_LSB = T1_PRODUCT_FRAC - T1_F; // 45 - 27 = 18
+localparam int T1_PRODUCT_W = X2_W + B_W;
+localparam int T1_PRODUCT_F = X2_F + B_F;          // 17 + 32 = 49
+localparam int T1_KEEP_MSB = T1_PRODUCT_W - 1;     // 48
+localparam int T1_KEEP_LSB = T1_PRODUCT_F - T1_F - X2_J; // 45 - 27 = 24
+localparam int T1_SHIFT = -X2_J;
 
-localparam int T2_PRODUCT_W = T2_W + SQ_W + 1;
-localparam int T2_PRODUCT_TRUNC_W = T2_W + SQ_W;
-localparam int T2_ROUND = C_W + SQ_W - T2_W;
+localparam int T2_PRODUCT_W = T2_W + SQ_W;
+localparam int T2_KEEP_MSB = T2_W + SQ_W;
+localparam int T2_KEEP_LSB = C_W + SQ_W - T2_W;
 
 localparam int Y_ROUND = S_W-Y_W;
 localparam int Y_ROUND_THRESH = 1 << (Y_ROUND-1);

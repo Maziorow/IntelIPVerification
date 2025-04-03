@@ -22,9 +22,9 @@ module quadra
 	 s_t s;
 
 
-	logic signed [49:0] Product_mul_temp1;  /* sfix50_En51 */
-    logic signed [48:0] Product_out1;  /* sfix49_En51 */
-	logic signed [T2_PRODUCT_W-1:0] t2_product;
+	logic signed [T1_PRODUCT_W:0] t1_product;
+
+	logic signed [T2_PRODUCT_W:0] t2_product;
 
 	logic signed [S_W+1:0] sum;
 	logic [Y_ROUND-1:0] round_bits;
@@ -45,17 +45,17 @@ module quadra
 
 	assign t0 = a >>> (A_SHIFT);
 
-	assign Product_mul_temp1 = $signed({1'b0,x2}) * b;
-	assign Product_out1 = Product_mul_temp1[48:0];
-	assign t1 = {{6{Product_out1[48]}}, Product_out1[48:24]};
+	assign t1_product = $signed({1'b0, x2}) * b;
+	assign t1 = $signed({{(T1_SHIFT){t1_product[T1_KEEP_MSB]}}, 
+                     t1_product[T1_KEEP_MSB:T1_KEEP_LSB]});
 
 	assign t2_product = $signed({1'b0, sq}) * c;
-  	assign t2 = t2_product[T2_PRODUCT_TRUNC_W-1:T2_ROUND];
+  	assign t2 = t2_product[T2_KEEP_MSB:T2_KEEP_LSB];
 
 	assign sum = t0 + t1 + t2;
   	assign s = sum[S_W-1:0];
 	assign round_bits = s[Y_ROUND-1:0];
 	assign round_bit = (round_bits > Y_ROUND_THRESH) || 
-                ((round_bits == Y_ROUND_THRESH) && s[Y_ROUND]);
+                ((round_bits == Y_ROUND_THRESH) && s[Y_ROUND]); //rounding
 	assign y = s[S_W-1:Y_ROUND] + round_bit;
 endmodule
