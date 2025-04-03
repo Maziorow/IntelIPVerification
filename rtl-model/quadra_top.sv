@@ -25,7 +25,9 @@ module quadra_top
     end
 
     quadra my_quadra( .x(x),
-							 .y(y));
+                      .clk(clk),
+                      .rst_b(rst_b),
+					  .y(y));
 
     // Outputs:
     always_comb y_dv = dv_p2;

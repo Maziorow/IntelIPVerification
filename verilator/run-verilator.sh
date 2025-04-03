@@ -22,6 +22,7 @@ verilator \
     --build \
     --timing \
     --trace \
+    --trace-structs \
     -j 0 \
     -Wall \
    -Wno-VARHIDDEN \

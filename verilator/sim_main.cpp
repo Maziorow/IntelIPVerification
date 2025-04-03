@@ -201,8 +201,8 @@ void testQuadra
     using namespace std;
 
     // Test params:
-     uint32_t x_start = 0x000000; // 0.0
-//    uint32_t x_start = 0xfffff0;
+//     uint32_t x_start = 0x000000; // 0.0
+    uint32_t x_start = 0xfffff0;
     uint32_t x_stop  = 0xffffff; // 1.999...
     uint32_t x_step  = 0x000001; // exhaustive test
 //  uint32_t x_step  = 0x000101; // sparse test
@@ -218,7 +218,6 @@ void testQuadra
 
         top->x    = x; // set input x to f(x)
         top->x_dv = 1; // assert data valid
-
         atPosEdgeClk(top, contextp, trace_fp);
         clock_cntr++;
         checkOutput(top, lat_fifo);
@@ -233,6 +232,7 @@ void testQuadra
         atPosEdgeClk(top, contextp, trace_fp);
         clock_cntr++;
         checkOutput(top, lat_fifo);
+
     }
 
     uint64_t lat_fifo_size = lat_fifo.size();

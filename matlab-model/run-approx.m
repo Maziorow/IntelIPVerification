@@ -1,8 +1,8 @@
-#! /bin/csh -f
+#! /usr/bin/zsh -f
 
-if (-f coeffs.txt) then
+if [ -f coeffs.txt]; then
     rm coeffs.txt
-endif
+fi
 
 octave approx.m |& tee coeffs.txt
 
