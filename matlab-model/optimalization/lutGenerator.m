@@ -1,5 +1,5 @@
 function lut = lutGenerator(shift)
-    if(shift!=0)
+    if(shift~=0)
         N = 2^(7-shift);
         n = [0:N-1]';
         x = 2*(n/N);

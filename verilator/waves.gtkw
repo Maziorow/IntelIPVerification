@@ -1,15 +1,15 @@
 [*]
-[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
-[*] Thu Apr  3 13:36:05 2025
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Sun Apr  6 16:58:27 2025
 [*]
-[dumpfile] "/home/mateusz/Documents/IntelIPVerification/verilator/dump.vcd"
-[dumpfile_mtime] "Thu Apr  3 13:28:11 2025"
-[dumpfile_size] 12940
-[savefile] "/home/mateusz/Documents/IntelIPVerification/verilator/waves.gtkw"
-[timestart] 11850
-[size] 1854 1004
-[pos] -1 -1
-*-11.847281 16780 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[dumpfile] "/home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator/dump.vcd"
+[dumpfile_mtime] "Sun Apr  6 14:11:12 2025"
+[dumpfile_size] 13253
+[savefile] "/home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator/waves.gtkw"
+[timestart] 500
+[size] 1920 1010
+[pos] -104 -104
+*-12.447282 8540 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.quadra_top.
 [treeopen] top.quadra_top.my_quadra.
@@ -17,7 +17,7 @@
 [sst_width] 273
 [signals_width] 248
 [sst_expanded] 1
-[sst_vpaned_height] 252
+[sst_vpaned_height] 254
 @28
 top.clk
 top.rst_b
@@ -35,7 +35,7 @@ top.quadra_top.my_quadra.stage1.x1[6:0]
 (4)top.quadra_top.my_quadra.stage1.x1[6:0]
 (5)top.quadra_top.my_quadra.stage1.x1[6:0]
 (6)top.quadra_top.my_quadra.stage1.x1[6:0]
-@41401204
+@1401200
 -group_end
 @40c00024
 [fpshift_count] 23
@@ -58,7 +58,7 @@ top.quadra_top.my_quadra.stage1.x2[16:0]
 (14)top.quadra_top.my_quadra.stage1.x2[16:0]
 (15)top.quadra_top.my_quadra.stage1.x2[16:0]
 (16)top.quadra_top.my_quadra.stage1.x2[16:0]
-@41401204
+@1401200
 -group_end
 @40000420
 [fpshift_count] 28
@@ -99,24 +99,46 @@ top.quadra_top.my_quadra.stage2.b[31:0]
 (29)top.quadra_top.my_quadra.stage2.b[31:0]
 (30)top.quadra_top.my_quadra.stage2.b[31:0]
 (31)top.quadra_top.my_quadra.stage2.b[31:0]
-@41401600
+@1401600
 -group_end
 @40000420
 [fpshift_count] 28
 top.quadra_top.my_quadra.stage2.c[31:0]
 [fpshift_count] 24
 top.quadra_top.my_quadra.stage2.sq[23:0]
-@40000024
+@40c00025
 [fpshift_count] 23
 top.quadra_top.my_quadra.stage2.x2[16:0]
+@29
+(0)top.quadra_top.my_quadra.stage2.x2[16:0]
+(1)top.quadra_top.my_quadra.stage2.x2[16:0]
+(2)top.quadra_top.my_quadra.stage2.x2[16:0]
+(3)top.quadra_top.my_quadra.stage2.x2[16:0]
+(4)top.quadra_top.my_quadra.stage2.x2[16:0]
+(5)top.quadra_top.my_quadra.stage2.x2[16:0]
+(6)top.quadra_top.my_quadra.stage2.x2[16:0]
+(7)top.quadra_top.my_quadra.stage2.x2[16:0]
+(8)top.quadra_top.my_quadra.stage2.x2[16:0]
+(9)top.quadra_top.my_quadra.stage2.x2[16:0]
+(10)top.quadra_top.my_quadra.stage2.x2[16:0]
+(11)top.quadra_top.my_quadra.stage2.x2[16:0]
+(12)top.quadra_top.my_quadra.stage2.x2[16:0]
+(13)top.quadra_top.my_quadra.stage2.x2[16:0]
+(14)top.quadra_top.my_quadra.stage2.x2[16:0]
+(15)top.quadra_top.my_quadra.stage2.x2[16:0]
+(16)top.quadra_top.my_quadra.stage2.x2[16:0]
+@41401205
+-group_end
 @40000420
 [fpshift_count] 27
 top.quadra_top.my_quadra.stage3.t0[30:0]
 @420
 top.quadra_top.my_quadra.stage3.t2[30:0]
-@40000421
+@40000420
 [fpshift_count] 27
 top.quadra_top.my_quadra.stage3.t1[30:0]
+@420
+top.quadra_top.my_quadra.s[28:0]
 @40000420
 [fpshift_count] 23
 top.quadra_top.y[24:0]

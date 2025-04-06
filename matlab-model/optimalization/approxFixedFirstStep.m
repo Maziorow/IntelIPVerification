@@ -1,8 +1,10 @@
-function y_fxd = approxFixedFirstStep(x_dbl, x_shift, lut)
+function in_spec = approxFixedFirstStep(x_dbl, x_shift, lut)
 
     format long g
 
     ERR_TOL = 2.150e-6;
+    M_PI = 3.14159265358979323846; %Same pi approximation as in the C++ code
+    PI_OVER_4 = M_PI/4.0;
 
     rdz = fimath('OverflowAction','Wrap','RoundingMethod','Zero');
     rne = fimath('OverflowAction','Wrap','RoundingMethod','Convergent');
@@ -59,22 +61,23 @@ function y_fxd = approxFixedFirstStep(x_dbl, x_shift, lut)
     T2_F=S_F;
     T2_W=T2_I+T2_F;
 
-    x_fxd = fi(double(x_dbl)/double(0x00800000),0,X_W,X_F,trn);
+    x_fxd = fi(x_dbl,0,X_W,X_F,trn);
     x_bin = x_fxd.bin;
 
-    x1_fxd = fi(bin2dec(x_bin(1:X1_W)),0,X1_W,X1_F);
-    x2_fxd = fi(bin2dec(x_bin(X2_W-1:end)),0,X2_W,X2_F-X2_J);
+    x1_fxd = fi(bin2dec(x_bin(1:X1_W)),0,X1_W,X1_F)
+    x2_fxd = fi(bin2dec(x_bin(X2_W-1:end)),0,X2_W,X2_F-X2_J)
+    hex(x2_fxd)
 
     lut_address = hex2dec(hex(x1_fxd));
 
     a_dbl = lut(lut_address+1,2);
-    a_fxd = fi(a_dbl,1,A_W,A_F,rdz);
+    a_fxd = fi(a_dbl,1,A_W,A_F,rdz)
     b_dbl = lut(lut_address+1,3);
-    b_fxd = fi(b_dbl,1,B_W,B_F,rdz);
+    b_fxd = fi(b_dbl,1,B_W,B_F,rdz)
     c_dbl = lut(lut_address+1,4);
-    c_fxd = fi(c_dbl,1,C_W,C_F,rdz);
+    c_fxd = fi(c_dbl,1,C_W,C_F,rdz)
 
-    sq_fxd = fi(x2_fxd*x2_fxd,0,SQ_W,SQ_F,trn);
+    sq_fxd = fi(x2_fxd*x2_fxd,0,SQ_W,SQ_F,trn)
 
     b_fxd.fimath = trn;
     x2_fxd.fimath = trn;
@@ -83,14 +86,16 @@ function y_fxd = approxFixedFirstStep(x_dbl, x_shift, lut)
     t0_fxd = fi(a_fxd,1,T0_W,T0_F,trn);
     t1_raw = b_fxd*x2_fxd;
     t1_fxd = fi(t1_raw,1,T1_W,T1_F,trn);
-    hex(t1_fxd)%Need to be fixed
     t2_fxd = fi(c_fxd*sq_fxd,1,T2_W,T2_F,trn);
 
-    s_fxd = fi(t0_fxd+t1_fxd+t2_fxd,1,S_W,S_F);
-    hex(s_fxd)%Need to be fixed
+    s_fxd = fi(t0_fxd+t1_fxd+t2_fxd,1,S_W,S_F)
 
     y_rnd = fi(s_fxd,1,Y_W,Y_F,rne);
     y_fxd = fi(y_rnd,1,Y_W,Y_F,trn);
-    hex(y_fxd)
-
+    
+    y_ref = sin((2.0 * x_dbl) - PI_OVER_4);
+    y_ref;
+    double(y_fxd);
+    y_err = abs(double(y_fxd)-y_ref);
+    in_spec = (y_err < ERR_TOL);
 end
