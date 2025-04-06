@@ -36,7 +36,7 @@ module quadra
 						  .sq(sq));
 
     // Stage 1
-    always_ff @(negedge clk) begin
+    always_ff @(posedge clk) begin
         if (!rst_b) begin
             stage1 <= '0;
         end else begin
@@ -46,35 +46,27 @@ module quadra
     end
 
 	//Stage 2
-	always_ff @(negedge clk) begin
-		if (!rst_b) begin
-			stage2 <= '0;
-		end else begin
-			stage2.x2 <= stage1.x2;
-			stage2.a <= a;
-			stage2.b <= b;
-			stage2.c <= c;
-			stage2.sq <= sq;
-		end
+	always_ff @(posedge clk) begin
+		stage2.x2 <= stage1.x2;
+		stage2.a <= a;
+		stage2.b <= b;
+		stage2.c <= c;
+		stage2.sq <= sq;
     end
 
 	//Stage 3
-	always_ff @(negedge clk) begin
-		if (!rst_b) begin
-			stage3 <= '0;
-		end else begin
-			stage3.t0 <= stage2.a >>> (A_SHIFT);
+	always_ff @(posedge clk) begin
+		stage3.t0 <= stage2.a >>> (A_SHIFT);
 
-			t1_product <= $signed({1'b0, stage2.x2}) * stage2.b;
-			stage3.t1 <= $signed({{(T1_SHIFT){t1_product[T1_KEEP_MSB]}}, 
-                     t1_product[T1_KEEP_MSB:T1_KEEP_LSB]});
+		stage3.t1 <= $signed({{(T1_SHIFT){t1_product[T1_KEEP_MSB]}}, 
+                    t1_product[T1_KEEP_MSB:T1_KEEP_LSB]});
 
-			t2_product <= $signed({1'b0, stage2.sq}) * stage2.c;
-			stage3.t2 <= t2_product[T2_KEEP_MSB:T2_KEEP_LSB];
-		end
+		stage3.t2 <= t2_product[T2_KEEP_MSB:T2_KEEP_LSB];
     end
 
 	always_comb begin
+		t1_product = ($signed({1'b0, stage2.x2}) * stage2.b);
+		t2_product = $signed({1'b0, stage2.sq}) * stage2.c;
 		sum = stage3.t0 + stage3.t1 + stage3.t2;
   		s = sum[S_W-1:0];
 		round_bits = s[Y_ROUND-1:0];

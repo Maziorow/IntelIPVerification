@@ -6,11 +6,11 @@
 #define __QUADRA_HPP
 
 #ifndef DBG_OUT
-#define DBG_OUT 0
+#define DBG_OUT 1
 #endif
 
 #ifndef DBG_TST
-#define DBG_TST 0
+#define DBG_TST 1
 #endif
 
 #include <ac_int.h>
@@ -42,6 +42,8 @@ const int X_W = X_I + X_F;   // bit width
 
 typedef ac_int  <X_W,      false>                x_int_t;
 typedef ac_fixed<X_W, X_I, false, trn, AC_WRAP>  x_fxd_t; // u1.23
+
+
 
 // x1: x[23:17] -> u1.6
 const int X1_I =  1;          // integer part
