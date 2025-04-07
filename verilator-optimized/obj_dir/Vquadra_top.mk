@@ -37,7 +37,7 @@ VM_PREFIX = Vquadra_top
 VM_MODPREFIX = Vquadra_top
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
-	-std=c++17 -I/home/mateusz/Documents/IntelIPVerification/verilator-optimized/../libs/ac_types/include -I/home/mateusz/Documents/IntelIPVerification/verilator-optimized/../c++-model-optimized \
+	-std=c++17 -I/home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator-optimized/../libs/ac_types/include -I/home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator-optimized/../c++-model-optimized \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
@@ -62,7 +62,7 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
-Quadra.o: /home/mateusz/Documents/IntelIPVerification/verilator-optimized/../c++-model-optimized/Quadra.cpp 
+Quadra.o: /home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator-optimized/../c++-model-optimized/Quadra.cpp 
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST)  -c -o $@ $<
 sim_main.o: sim_main.cpp 
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST)  -c -o $@ $<

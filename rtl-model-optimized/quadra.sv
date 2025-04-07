@@ -20,8 +20,9 @@ module quadra
     stage2_t stage2;
     stage3_t stage3;
 
-	logic signed [36:0] t1_product;
-	logic signed [T2_PRODUCT_W-1:0] t2_product;
+
+	logic signed [T1_PRODUCT_W:0] t1_product;
+	logic signed [T2_PRODUCT_W:0] t2_product;
 	logic signed [S_W+1:0] sum;
 	logic [Y_ROUND-1:0] round_bits;
 	logic round_bit;
@@ -56,14 +57,15 @@ module quadra
 
 	//Stage 3
 	always_ff @(posedge clk) begin
-		stage3.t0 <= {stage2.a, {R_F{1'b0}}};
-        stage3.t1 <= t1_product[T1_KEEP_MSB:T1_KEEP_LSB];
+		stage3.t0 <= {stage2.a, {A_SHIFT{1'b0}}};
+        stage3.t1 <= $signed({{(T1_SHIFT){t1_product[T1_KEEP_MSB]}}, 
+                    t1_product[T1_KEEP_MSB:T1_KEEP_LSB]});
         stage3.t2 <= t2_product[T2_KEEP_MSB:T2_KEEP_LSB];
     end
 
 	always_comb begin
-        t1_product = $signed({{(B_W-X2_W){1'b0}}, stage2.x2}) * $signed(stage2.b);
-        t2_product = $signed(stage2.sq) * $signed(stage2.c);
+        t1_product = ($signed({1'b0, stage2.x2}) * stage2.b);
+        t2_product = $signed(stage2.sq) * stage2.c;
 		sum = stage3.t0 + stage3.t1 + stage3.t2;
   		s = sum[S_W-1:0];
 		round_bits = s[Y_ROUND-1:0];

@@ -24,9 +24,9 @@ void Vquadra_top___024root___eval_nba(Vquadra_top___024root* vlSelf) {
     }
 }
 
-extern const VlUnpacked<IData/*24:0*/, 128> Vquadra_top__ConstPool__TABLE_h7d1f8f95_0;
-extern const VlUnpacked<IData/*18:0*/, 128> Vquadra_top__ConstPool__TABLE_hca834a7e_0;
-extern const VlUnpacked<SData/*14:0*/, 128> Vquadra_top__ConstPool__TABLE_h28554c6e_0;
+extern const VlUnpacked<IData/*26:0*/, 128> Vquadra_top__ConstPool__TABLE_hed6a46fe_0;
+extern const VlUnpacked<IData/*19:0*/, 128> Vquadra_top__ConstPool__TABLE_hd92a96a5_0;
+extern const VlUnpacked<SData/*15:0*/, 128> Vquadra_top__ConstPool__TABLE_h47c94a26_0;
 
 VL_INLINE_OPT void Vquadra_top___024root___nba_sequent__TOP__0(Vquadra_top___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vquadra_top___024root___nba_sequent__TOP__0\n"); );
@@ -40,108 +40,41 @@ VL_INLINE_OPT void Vquadra_top___024root___nba_sequent__TOP__0(Vquadra_top___024
     CData/*6:0*/ __Vtableidx3;
     __Vtableidx3 = 0;
     // Body
+    vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3__BRA__58__03a29__KET__ 
+        = ((0x3f000000U & ((- (IData)((1U & (IData)(
+                                                    (vlSelfRef.quadra_top__DOT__my_quadra__DOT__t1_product 
+                                                     >> 0x24U))))) 
+                           << 0x18U)) | (0xffffffU 
+                                         & (IData)(
+                                                   (vlSelfRef.quadra_top__DOT__my_quadra__DOT__t1_product 
+                                                    >> 0xdU))));
     vlSelfRef.quadra_top__DOT__dv_p2 = ((IData)(vlSelfRef.rst_b) 
                                         && (IData)(vlSelfRef.quadra_top__DOT__dv_p1));
-    vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[0U] 
-        = ((0x1fffffffU & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[0U]) 
-           | ((IData)((QData)((IData)((0xffffffU & (IData)(
-                                                           (0x1ffffffULL 
-                                                            & (VL_MULS_QQQ(37, 
-                                                                           (0x1fffffffffULL 
-                                                                            & VL_EXTENDS_QI(37,19, 
-                                                                                (0x1ffffU 
-                                                                                & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
-                                                                                << 8U) 
-                                                                                | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U] 
-                                                                                >> 0x18U))))), 
-                                                                           (0x1fffffffffULL 
-                                                                            & VL_EXTENDS_QI(37,19, 
-                                                                                (0x7ffffU 
-                                                                                & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
-                                                                                << 8U) 
-                                                                                | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
-                                                                                >> 0x18U)))))) 
-                                                               >> 0xcU))))))) 
-              << 0x1dU));
-    vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[1U] 
-        = ((0x80000000U & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[1U]) 
-           | (((IData)((QData)((IData)((0xffffffU & (IData)(
-                                                            (0x1ffffffULL 
-                                                             & (VL_MULS_QQQ(37, 
-                                                                            (0x1fffffffffULL 
-                                                                             & VL_EXTENDS_QI(37,19, 
-                                                                                (0x1ffffU 
-                                                                                & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
-                                                                                << 8U) 
-                                                                                | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U] 
-                                                                                >> 0x18U))))), 
-                                                                            (0x1fffffffffULL 
-                                                                             & VL_EXTENDS_QI(37,19, 
-                                                                                (0x7ffffU 
-                                                                                & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
-                                                                                << 8U) 
-                                                                                | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
-                                                                                >> 0x18U)))))) 
-                                                                >> 0xcU))))))) 
-               >> 3U) | ((IData)(((QData)((IData)((0xffffffU 
-                                                   & (IData)(
-                                                             (0x1ffffffULL 
-                                                              & (VL_MULS_QQQ(37, 
-                                                                             (0x1fffffffffULL 
-                                                                              & VL_EXTENDS_QI(37,19, 
-                                                                                (0x1ffffU 
-                                                                                & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
-                                                                                << 8U) 
-                                                                                | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U] 
-                                                                                >> 0x18U))))), 
-                                                                             (0x1fffffffffULL 
-                                                                              & VL_EXTENDS_QI(37,19, 
-                                                                                (0x7ffffU 
-                                                                                & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
-                                                                                << 8U) 
-                                                                                | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
-                                                                                >> 0x18U)))))) 
-                                                                 >> 0xcU)))))) 
-                                  >> 0x20U)) << 0x1dU)));
-    vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[1U] 
-        = ((0x7fffffffU & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[1U]) 
-           | (0x80000000U & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
-                             << 0x14U)));
-    vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[2U] 
-        = (0xffffffU & ((0x7ff00000U & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[3U] 
-                                        << 0x14U)) 
-                        | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
-                           >> 0xcU)));
-    vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[0U] 
-        = ((0xe0000000U & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[0U]) 
-           | (0x1fffffffU & (IData)((0x1fffffffULL 
-                                     & (VL_MULS_QQQ(39, 
-                                                    (0x7fffffffffULL 
-                                                     & VL_EXTENDS_QI(39,24, 
-                                                                     (0xffffffU 
-                                                                      & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U]))), 
-                                                    (0x7fffffffffULL 
-                                                     & VL_EXTENDS_QI(39,15, 
-                                                                     (0x7fffU 
-                                                                      & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
-                                                                         >> 9U))))) 
-                                        >> 0xaU)))));
+    vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3__BRA__87__03a59__KET__ 
+        = (0x1ffffffcU & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[3U] 
+                           << 0x15U) | (0x1ffffcU & 
+                                        (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
+                                         >> 0xbU))));
+    vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3__BRA__28__03a0__KET__ 
+        = (0x1fffffffU & (IData)((0x3fffffffULL & (
+                                                   VL_MULS_QQQ(41, 
+                                                               (0x1ffffffffffULL 
+                                                                & VL_EXTENDS_QI(41,24, 
+                                                                                (0xffffffU 
+                                                                                & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U]))), 
+                                                               (0x1ffffffffffULL 
+                                                                & VL_EXTENDS_QI(41,16, 
+                                                                                (0xffffU 
+                                                                                & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
+                                                                                >> 9U))))) 
+                                                   >> 0xbU))));
     vlSelfRef.y_dv = vlSelfRef.quadra_top__DOT__dv_p2;
     vlSelfRef.quadra_top__DOT__dv_p1 = ((IData)(vlSelfRef.rst_b) 
                                         && (IData)(vlSelfRef.quadra_top__DOT__dv_p0));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__sum 
-        = (0x7fffffffU & ((VL_EXTENDS_II(31,29, (0x1fffffffU 
-                                                 & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[2U] 
-                                                     << 5U) 
-                                                    | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[1U] 
-                                                       >> 0x1bU)))) 
-                           + VL_EXTENDS_II(31,30, (0x3fffffffU 
-                                                   & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[1U] 
-                                                       << 3U) 
-                                                      | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[0U] 
-                                                         >> 0x1dU))))) 
-                          + VL_EXTENDS_II(31,29, (0x1fffffffU 
-                                                  & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3[0U]))));
+        = (0x7fffffffU & ((VL_EXTENDS_II(31,29, vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3__BRA__87__03a59__KET__) 
+                           + VL_EXTENDS_II(31,30, vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3__BRA__58__03a29__KET__)) 
+                          + VL_EXTENDS_II(31,29, vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3__BRA__28__03a0__KET__)));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__s = 
         (0x1fffffffU & vlSelfRef.quadra_top__DOT__my_quadra__DOT__sum);
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__round_bits 
@@ -156,42 +89,39 @@ VL_INLINE_OPT void Vquadra_top___024root___nba_sequent__TOP__0(Vquadra_top___024
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U] 
         = ((0xffffffU & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U]) 
            | ((IData)((((QData)((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__b)) 
-                        << 0x20U) | (QData)((IData)(
-                                                    (((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__c) 
-                                                      << 0x11U) 
-                                                     | (0x1ffffU 
-                                                        & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1)))))) 
+                        << 0x21U) | (((QData)((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__c)) 
+                                      << 0x11U) | (QData)((IData)(
+                                                                  (0x1ffffU 
+                                                                   & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1)))))) 
               << 0x18U));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
         = (((IData)((((QData)((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__b)) 
-                      << 0x20U) | (QData)((IData)((
-                                                   ((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__c) 
-                                                    << 0x11U) 
-                                                   | (0x1ffffU 
-                                                      & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1)))))) 
+                      << 0x21U) | (((QData)((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__c)) 
+                                    << 0x11U) | (QData)((IData)(
+                                                                (0x1ffffU 
+                                                                 & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1)))))) 
             >> 8U) | ((IData)(((((QData)((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__b)) 
-                                 << 0x20U) | (QData)((IData)(
-                                                             (((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__c) 
-                                                               << 0x11U) 
-                                                              | (0x1ffffU 
+                                 << 0x21U) | (((QData)((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__c)) 
+                                               << 0x11U) 
+                                              | (QData)((IData)(
+                                                                (0x1ffffU 
                                                                  & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1))))) 
                                >> 0x20U)) << 0x18U));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
-        = ((0xfffff800U & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U]) 
+        = ((0xffffe000U & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U]) 
            | ((IData)(((((QData)((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__b)) 
-                         << 0x20U) | (QData)((IData)(
-                                                     (((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__c) 
-                                                       << 0x11U) 
-                                                      | (0x1ffffU 
-                                                         & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1))))) 
+                         << 0x21U) | (((QData)((IData)(vlSelfRef.quadra_top__DOT__my_quadra__DOT__c)) 
+                                       << 0x11U) | (QData)((IData)(
+                                                                   (0x1ffffU 
+                                                                    & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1))))) 
                        >> 0x20U)) >> 8U));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
-        = ((0x7ffU & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U]) 
+        = ((0x1fffU & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U]) 
            | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__a 
-              << 0xbU));
+              << 0xdU));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[3U] 
-        = (0xfU & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__a 
-                   >> 0x15U));
+        = (0xffU & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__a 
+                    >> 0x13U));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U] 
         = ((0xff000000U & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U]) 
            | (0xfffU & (IData)((0xfffULL & (((QData)((IData)(
@@ -203,20 +133,35 @@ VL_INLINE_OPT void Vquadra_top___024root___nba_sequent__TOP__0(Vquadra_top___024
                                             >> 0x16U)))));
     vlSelfRef.quadra_top__DOT__dv_p0 = ((IData)(vlSelfRef.rst_b) 
                                         && (IData)(vlSelfRef.x_dv));
+    vlSelfRef.quadra_top__DOT__my_quadra__DOT__t1_product 
+        = (0x3fffffffffULL & VL_MULS_QQQ(38, (0x3fffffffffULL 
+                                              & VL_EXTENDS_QI(38,18, 
+                                                              (0x1ffffU 
+                                                               & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
+                                                                   << 8U) 
+                                                                  | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U] 
+                                                                     >> 0x18U))))), 
+                                         (0x3fffffffffULL 
+                                          & VL_EXTENDS_QI(38,20, 
+                                                          (0xfffffU 
+                                                           & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
+                                                               << 7U) 
+                                                              | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
+                                                                 >> 0x19U)))))));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1 
         = ((IData)(vlSelfRef.rst_b) ? vlSelfRef.x : 0U);
     __Vtableidx1 = (0x7fU & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1 
                              >> 0x11U));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__a = 
-        Vquadra_top__ConstPool__TABLE_h7d1f8f95_0[__Vtableidx1];
+        Vquadra_top__ConstPool__TABLE_hed6a46fe_0[__Vtableidx1];
     __Vtableidx2 = (0x7fU & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1 
                              >> 0x11U));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__b = 
-        Vquadra_top__ConstPool__TABLE_hca834a7e_0[__Vtableidx2];
+        Vquadra_top__ConstPool__TABLE_hd92a96a5_0[__Vtableidx2];
     __Vtableidx3 = (0x7fU & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1 
                              >> 0x11U));
     vlSelfRef.quadra_top__DOT__my_quadra__DOT__c = 
-        Vquadra_top__ConstPool__TABLE_h28554c6e_0[__Vtableidx3];
+        Vquadra_top__ConstPool__TABLE_h47c94a26_0[__Vtableidx3];
 }
 
 void Vquadra_top___024root___eval_triggers__act(Vquadra_top___024root* vlSelf);
@@ -276,7 +221,7 @@ void Vquadra_top___024root___eval(Vquadra_top___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vquadra_top___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("/home/mateusz/Documents/IntelIPVerification/verilator-optimized/../rtl-model-optimized/quadra_top.sv", 3, "", "NBA region did not converge.");
+            VL_FATAL_MT("/home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator-optimized/../rtl-model-optimized/quadra_top.sv", 3, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -287,7 +232,7 @@ void Vquadra_top___024root___eval(Vquadra_top___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vquadra_top___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("/home/mateusz/Documents/IntelIPVerification/verilator-optimized/../rtl-model-optimized/quadra_top.sv", 3, "", "Active region did not converge.");
+                VL_FATAL_MT("/home/mateusz/Documents/RekrutacjaZadania/Intel/IntelZadanie/verilator-optimized/../rtl-model-optimized/quadra_top.sv", 3, "", "Active region did not converge.");
             }
             vlSelfRef.__VactIterCount = ((IData)(1U) 
                                          + vlSelfRef.__VactIterCount);

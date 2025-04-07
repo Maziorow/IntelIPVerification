@@ -47,21 +47,21 @@ typedef logic [X2_W-1:0] x2_t;
 
 
 localparam int A_I = 2;
-localparam int A_F = 23;
+localparam int A_F = 25;
 localparam int A_W = A_I + A_F;
 
 typedef logic signed [A_W-1:0] a_t;
 
 
 localparam int B_I = 3;
-localparam int B_F = 16;
+localparam int B_F = 17;
 localparam int B_W = B_I + B_F;
 
 typedef logic signed [B_W-1:0] b_t;
 
 
 localparam int C_I = 2;
-localparam int C_F = 13;
+localparam int C_F = 14;
 localparam int C_W = C_I + C_F;
 
 typedef logic signed [C_W-1:0] c_t;
@@ -102,6 +102,8 @@ localparam int T2_F = S_F;
 localparam int T2_W = T2_I + T2_F;
 
 typedef logic signed [T2_W-1:0] t2_t;
+
+localparam int A_SHIFT = T0_W-A_W;
 
 localparam int T1_PRODUCT_W = X2_W + B_W;
 localparam int T1_PRODUCT_F = X2_F + B_F;

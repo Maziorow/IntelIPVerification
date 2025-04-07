@@ -48,9 +48,9 @@ module quadra
 	//Stage 2
 	always_ff @(posedge clk) begin
 		stage2.x2 <= stage1.x2;
-		stage2.a <= a >>> 1;
-		stage2.b <= b >>> 1;
-		stage2.c <= c >>> 1;
+		stage2.a <= a;
+		stage2.b <= b;
+		stage2.c <= c;
 		stage2.sq <= sq;
     end
 
