@@ -6,11 +6,11 @@
 #define __QUADRA_HPP
 
 #ifndef DBG_OUT
-#define DBG_OUT 1
+#define DBG_OUT 0
 #endif
 
 #ifndef DBG_TST
-#define DBG_TST 1
+#define DBG_TST 0
 #endif
 
 #include <ac_int.h>

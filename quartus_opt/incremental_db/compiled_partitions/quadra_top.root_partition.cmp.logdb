@@ -1,0 +1,8 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,quadra:my_quadra|lpm_mult:Mult0|mult_s5t:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,quadra:my_quadra|lpm_mult:Mult0|mult_s5t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,quadra:my_quadra|lpm_mult:Mult1|mult_r5t:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,quadra:my_quadra|lpm_mult:Mult1|mult_r5t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,quadra:my_quadra|square:square_1|lpm_mult:Mult0|mult_3dt:auto_generated|mac_out2,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,quadra:my_quadra|lpm_mult:Mult1|mult_r5t:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,quadra:my_quadra|lpm_mult:Mult1|mult_r5t:auto_generated|mac_mult1,

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Apr  7 02:39:51 2025
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : quadra_top
+Top-level Entity Name : quadra_top
+Family : Cyclone 10 LP
+Device : 10CL006YE144A7G
+Timing Models : Final
+Total logic elements : 204 / 6,272 ( 3 % )
+    Total combinational functions : 199 / 6,272 ( 3 % )
+    Dedicated logic registers : 72 / 6,272 ( 1 % )
+Total registers : 72
+Total pins : 53 / 89 ( 60 % )
+Total virtual pins : 0
+Total memory bits : 11,904 / 276,480 ( 4 % )
+Embedded Multiplier 9-bit elements : 10 / 30 ( 33 % )
+Total PLLs : 0 / 2 ( 0 % )

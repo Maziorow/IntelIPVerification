@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Apr  7 02:39:46 2025
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : quadra_top
+Top-level Entity Name : quadra_top
+Family : Cyclone 10 LP
+Total logic elements : 257
+    Total combinational functions : 199
+    Dedicated logic registers : 130
+Total registers : 130
+Total pins : 53
+Total virtual pins : 0
+Total memory bits : 11,904
+Embedded Multiplier 9-bit elements : 10
+Total PLLs : 0

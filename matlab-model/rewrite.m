@@ -5,12 +5,12 @@
 
 function lut = write_lut_sv()
   % Fixed-point format (same as print_coeffs.m)
-  A_I = 4;  A_F = 28;  A_W = A_I + A_F;  % s4.28
-  B_I = 4;  B_F = 28;  B_W = B_I + B_F;  % s4.28
-  C_I = 4;  C_F = 28;  C_W = C_I + B_F;  % s4.28
+  A_I = 2;  A_F = 23;  A_W = A_I + A_F;  % s4.28
+  B_I = 3;  B_F = 16;  B_W = B_I + B_F;  % s4.28
+  C_I = 2;  C_F = 13;  C_W = C_I + C_F;  % s4.28
 
   % Read CoeffTable.hpp
-  fid = fopen('../../c++-model/CoeffTable.hpp', 'r');
+  fid = fopen('../c++-model/CoeffTable.hpp', 'r');
   if fid == -1
     error('Could not open CoeffTable.hpp');
   end
@@ -63,13 +63,13 @@ function lut = write_lut_sv()
   fprintf(fid, '    unique casez (x1)\n');
   for i = 1:size(coeffs, 1)
     k = coeffs(i, 1);
-    a_q = floor(coeffs(i, 2) * (2^A_F));
+    a_q = fix(coeffs(i, 2) * (2^A_F));
     if (a_q < 0)
       a_val = a_q + (2^A_W);
     else
       a_val = a_q;
     end
-    fprintf(fid, '        7''b%s :  a = 32''h%08x;\n', dec2bin(k,7), a_val);
+    fprintf(fid, '        7''b%s :  a = 25''h%07x;\n', dec2bin(k,7), a_val);
   end
   fprintf(fid, '        default    :  a = ''x;\n');
   fprintf(fid, '    endcase\n\n');
@@ -79,13 +79,13 @@ function lut = write_lut_sv()
   fprintf(fid, '    unique casez (x1)\n');
   for i = 1:size(coeffs, 1)
     k = coeffs(i, 1);
-    b_q = floor(coeffs(i, 3) * (2^B_F));
+    b_q = fix(coeffs(i, 3) * (2^B_F));
     if (b_q < 0)
       b_val = b_q + (2^B_W);
     else
       b_val = b_q;
     end
-    fprintf(fid, '        7''b%s :  b = 32''h%08x;\n', dec2bin(k,7), b_val);
+    fprintf(fid, '        7''b%s :  b = 19''h%05x;\n', dec2bin(k,7), b_val);
   end
   fprintf(fid, '        default    :  b = ''x;\n');
   fprintf(fid, '    endcase\n\n');
@@ -95,13 +95,13 @@ function lut = write_lut_sv()
   fprintf(fid, '    unique casez (x1)\n');
   for i = 1:size(coeffs, 1)
     k = coeffs(i, 1);
-    c_q = floor(coeffs(i, 4) * (2^C_F));
+    c_q = fix(coeffs(i, 4) * (2^C_F));
     if (c_q < 0)
       c_val = c_q + (2^C_W);
     else
       c_val = c_q;
     end
-    fprintf(fid, '        7''b%s :  c = 32''h%08x;\n', dec2bin(k,7), c_val);
+    fprintf(fid, '        7''b%s :  c = 15''h%04x;\n', dec2bin(k,7), c_val);
   end
   fprintf(fid, '        default    :  c = ''x;\n');
   fprintf(fid, '    endcase\n\n');

@@ -1,6 +1,6 @@
 m_start = 0x000000;
 m_stop = 0x0f0000;
-m_step = 0x000101;
+m_step = 0x001001;
 stop = false;
 x1F = 0;
 
