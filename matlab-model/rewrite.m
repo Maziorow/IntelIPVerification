@@ -5,9 +5,9 @@
 
 function lut = write_lut_sv()
   % Fixed-point format (same as print_coeffs.m)
-  A_I = 2;  A_F = 25;  A_W = A_I + A_F;  % s4.28
-  B_I = 3;  B_F = 17;  B_W = B_I + B_F;  % s4.28
-  C_I = 2;  C_F = 14;  C_W = C_I + C_F;  % s4.28
+  A_I = 1;  A_F = 23;  A_W = A_I + A_F;  % s4.28
+  B_I = 3;  B_F = 16;  B_W = B_I + B_F;  % s4.28
+  C_I = 2;  C_F = 11;  C_W = C_I + C_F;  % s4.28
 
   % Read CoeffTable.hpp
   fid = fopen('../c++-model/CoeffTable.hpp', 'r');
@@ -69,7 +69,7 @@ function lut = write_lut_sv()
     else
       a_val = a_q;
     end
-    fprintf(fid, '        7''b%s :  a = 27''h%07x;\n', dec2bin(k,7), a_val);
+    fprintf(fid, '        7''b%s :  a = %d''h%06x;\n', dec2bin(k,7), A_W, a_val);
   end
   fprintf(fid, '        default    :  a = ''x;\n');
   fprintf(fid, '    endcase\n\n');
@@ -85,7 +85,7 @@ function lut = write_lut_sv()
     else
       b_val = b_q;
     end
-    fprintf(fid, '        7''b%s :  b = 20''h%05x;\n', dec2bin(k,7), b_val);
+    fprintf(fid, '        7''b%s :  b = %d''h%05x;\n', dec2bin(k,7), B_W, b_val);
   end
   fprintf(fid, '        default    :  b = ''x;\n');
   fprintf(fid, '    endcase\n\n');
@@ -101,7 +101,7 @@ function lut = write_lut_sv()
     else
       c_val = c_q;
     end
-    fprintf(fid, '        7''b%s :  c = 16''h%04x;\n', dec2bin(k,7), c_val);
+    fprintf(fid, '        7''b%s :  c = %d''h%04x;\n', dec2bin(k,7), C_W, c_val);
   end
   fprintf(fid, '        default    :  c = ''x;\n');
   fprintf(fid, '    endcase\n\n');

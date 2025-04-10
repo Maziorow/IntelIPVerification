@@ -28,9 +28,9 @@ void Vquadra_top___024root__trace_chg_0_sub_0(Vquadra_top___024root* vlSelf, Ver
         bufp->chgBit(oldp+1,(vlSelfRef.quadra_top__DOT__dv_p1));
         bufp->chgBit(oldp+2,(vlSelfRef.quadra_top__DOT__dv_p2));
         bufp->chgIData(oldp+3,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__s),29);
-        bufp->chgIData(oldp+4,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__a),27);
-        bufp->chgIData(oldp+5,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__b),20);
-        bufp->chgSData(oldp+6,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__c),16);
+        bufp->chgIData(oldp+4,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__a),24);
+        bufp->chgIData(oldp+5,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__b),19);
+        bufp->chgSData(oldp+6,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__c),13);
         bufp->chgIData(oldp+7,((0xfffU & (IData)((0xfffULL 
                                                   & (((QData)((IData)(
                                                                       (0x1ffffU 
@@ -42,35 +42,35 @@ void Vquadra_top___024root__trace_chg_0_sub_0(Vquadra_top___024root* vlSelf, Ver
         bufp->chgCData(oldp+8,((0x7fU & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1 
                                          >> 0x11U))),7);
         bufp->chgIData(oldp+9,((0x1ffffU & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage1)),17);
-        bufp->chgIData(oldp+10,((0x7ffffffU & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[3U] 
-                                                << 0x13U) 
-                                               | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
-                                                  >> 0xdU)))),27);
-        bufp->chgIData(oldp+11,((0xfffffU & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
-                                              << 7U) 
+        bufp->chgIData(oldp+10,((0xffffffU & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[3U] 
+                                               << 0x17U) 
+                                              | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
+                                                 >> 9U)))),24);
+        bufp->chgIData(oldp+11,((0x7ffffU & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[2U] 
+                                              << 0xaU) 
                                              | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
-                                                >> 0x19U)))),20);
-        bufp->chgSData(oldp+12,((0xffffU & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
-                                            >> 9U))),16);
+                                                >> 0x16U)))),19);
+        bufp->chgSData(oldp+12,((0x1fffU & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
+                                            >> 9U))),13);
         bufp->chgIData(oldp+13,((0x1ffffU & ((vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
                                               << 8U) 
                                              | (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U] 
                                                 >> 0x18U)))),17);
         bufp->chgIData(oldp+14,((0xffffffU & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U])),24);
-        bufp->chgIData(oldp+15,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3__BRA__87__03a59__KET__),29);
+        bufp->chgIData(oldp+15,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3__BRA__86__03a59__KET__),28);
         bufp->chgIData(oldp+16,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3__BRA__58__03a29__KET__),30);
         bufp->chgIData(oldp+17,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage3__BRA__28__03a0__KET__),29);
-        bufp->chgQData(oldp+18,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__t1_product),38);
-        bufp->chgQData(oldp+20,((0x1ffffffffffULL & 
-                                 VL_MULS_QQQ(41, (0x1ffffffffffULL 
-                                                  & VL_EXTENDS_QI(41,24, 
+        bufp->chgQData(oldp+18,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__t1_product),37);
+        bufp->chgQData(oldp+20,((0x3fffffffffULL & 
+                                 VL_MULS_QQQ(38, (0x3fffffffffULL 
+                                                  & VL_EXTENDS_QI(38,24, 
                                                                   (0xffffffU 
                                                                    & vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[0U]))), 
-                                             (0x1ffffffffffULL 
-                                              & VL_EXTENDS_QI(41,16, 
-                                                              (0xffffU 
+                                             (0x3fffffffffULL 
+                                              & VL_EXTENDS_QI(38,13, 
+                                                              (0x1fffU 
                                                                & (vlSelfRef.quadra_top__DOT__my_quadra__DOT__stage2[1U] 
-                                                                  >> 9U))))))),41);
+                                                                  >> 9U))))))),38);
         bufp->chgIData(oldp+22,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__sum),31);
         bufp->chgCData(oldp+23,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__round_bits),4);
         bufp->chgBit(oldp+24,(vlSelfRef.quadra_top__DOT__my_quadra__DOT__round_bit));
